@@ -39,6 +39,9 @@ services:
       DOCKER_MODS: ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub
       JELLYFIN_PublishedServerUrl: https://mydomain.com/jellyfin
       # ...
+
+volumes:
+  jellyfin_config:
 ```
 
 ## Important note
@@ -48,4 +51,4 @@ See
 [Jellyscrub's documentation](https://github.com/nicknsy/jellyscrub#installation)
 for instructions.
 
-<!-- vim: set ts=4 sw=4 et : -->
+<!-- vim: set ts=2 sw=2 et : -->
