@@ -9,6 +9,10 @@ a script required by the Jellyscrub plugin.
 Simply add `ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub` to the
 `DOCKER_MODS` environment variable for your Jellyfin container.
 
+The `JELLYFIN_PublishedServerUrl` environment variable must also be defined
+properly in order to this mod to work, as it sets the base URL to serve the
+script from.
+
 An Docker Compose service definition might look like this...
 ```yaml
 version: "3"
@@ -33,10 +37,11 @@ services:
     restart: unless-stopped
     environment:
       DOCKER_MODS: ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub
+	  JELLYFIN_PublishedServerUrl: https://mydomain.com/jellyfin
       # ...
 ```
 
-## When to use it
+## Important note
 This mod *will not* enable Jellyscrub on its own.
 The Jellyscrub plugin for Jellyfin needs to be installed first.
 See
