@@ -1,0 +1,11 @@
+#!/bin/sh
+
+JELLYSCRUB_LINE="<script plugin=\"Jellyscrub\" version=\"1.0.0.0\" src=\"${JELLYFIN_PublishedServerUrl}/Trickplay/ClientScript\"></script>"
+INDEXFILE=/usr/share/jellyfin/web/index.html
+
+if ! grep -qF -e "$JELLYSCRUB_LINE" "$INDEXFILE"
+then
+	# HTML file is minified, so we insert directly in front of "</body>" rather
+	# than on the line above
+	sed -i "s#</body>#${JELLYSCRUB_LINE}&#" "$INDEXFILE"
+fi
