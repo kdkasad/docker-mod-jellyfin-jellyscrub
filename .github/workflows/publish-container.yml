@@ -48,7 +48,7 @@ jobs:
           tags: |
             type=raw,value=${{ env.MOD_NAME }},prefix=
             type=ref,event=tag
-            type=sha
+            type=sha,prefix=${{ env.MOD_NAME }}-,format=short
           flavor: |
             latest=true
             prefix=${{ env.MOD_NAME }}-,onlatest=true
