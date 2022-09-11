@@ -37,7 +37,7 @@ services:
     restart: unless-stopped
     environment:
       DOCKER_MODS: ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub
-	  JELLYFIN_PublishedServerUrl: https://mydomain.com/jellyfin
+      JELLYFIN_PublishedServerUrl: https://mydomain.com/jellyfin
       # ...
 ```
 
@@ -47,3 +47,5 @@ The Jellyscrub plugin for Jellyfin needs to be installed first.
 See
 [Jellyscrub's documentation](https://github.com/nicknsy/jellyscrub#installation)
 for instructions.
+
+<!-- vim: set ts=4 sw=4 et : -->
