@@ -32,8 +32,8 @@ services:
       - /dev/dri/renderD128:/dev/dri/renderD128
     restart: unless-stopped
     environment:
-		DOCKER_MODS: ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub
-		# ...
+      DOCKER_MODS: ghcr.io/kdkasad/docker-mods:jellyfin-jellyscrub
+      # ...
 ```
 
 ## When to use it
